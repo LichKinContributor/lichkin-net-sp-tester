@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lichkin-net-sp-tester", "lichkin-net-sp-tester\lichkin-net-sp-tester.csproj", "{AABBCEFD-4E5F-41C1-A5AF-E6A53A3E64E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AABBCEFD-4E5F-41C1-A5AF-E6A53A3E64E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABBCEFD-4E5F-41C1-A5AF-E6A53A3E64E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABBCEFD-4E5F-41C1-A5AF-E6A53A3E64E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABBCEFD-4E5F-41C1-A5AF-E6A53A3E64E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1D3BF7B-1F6D-40DF-911E-4BB8F62F0BAF}
+	EndGlobalSection
+EndGlobal
