@@ -144,19 +144,25 @@ namespace LichKin.IO.Ports.Test
         delegate void RichTextBox_AppendText_Deletgate(RichTextBox richTextBox, String text);
         private void RichTextBox_AppendText(RichTextBox richTextBox, String text)
         {
-            if (!richTextBox.IsDisposed)
+            try
             {
-                if (richTextBox.InvokeRequired)
+                if (!richTextBox.IsDisposed)
                 {
-                    if (!this.IsDisposed)
+                    if (richTextBox.InvokeRequired)
                     {
-                        this.Invoke(new RichTextBox_AppendText_Deletgate(RichTextBox_AppendText), new object[] { richTextBox, text });
+                        if (!this.IsDisposed)
+                        {
+                            this.Invoke(new RichTextBox_AppendText_Deletgate(RichTextBox_AppendText), new object[] { richTextBox, text });
+                        }
+                    }
+                    else
+                    {
+                        richTextBox.AppendText(DateTime.Now.ToString("[yyyy-MM-dd_HH:mm:ss.fff]") + " -> " + text + "\n");
                     }
                 }
-                else
-                {
-                    richTextBox.AppendText(DateTime.Now.ToString("[yyyy-MM-dd_HH:mm:ss.fff]") + " -> " + text + "\n");
-                }
+            }
+            catch
+            {
             }
         }
 
@@ -190,19 +196,25 @@ namespace LichKin.IO.Ports.Test
         delegate void Checkbox_Checked_Delegate(CheckBox checkBox, Boolean @checked);
         private void Checkbox_Checked(CheckBox checkBox, Boolean @checked)
         {
-            if (!checkBox.IsDisposed)
+            try
             {
-                if (checkBox.InvokeRequired)
+                if (!checkBox.IsDisposed)
                 {
-                    if (!this.IsDisposed)
+                    if (checkBox.InvokeRequired)
                     {
-                        this.Invoke(new Checkbox_Checked_Delegate(Checkbox_Checked), new object[] { checkBox, @checked });
+                        if (!this.IsDisposed)
+                        {
+                            this.Invoke(new Checkbox_Checked_Delegate(Checkbox_Checked), new object[] { checkBox, @checked });
+                        }
+                    }
+                    else
+                    {
+                        checkBox.Checked = @checked;
                     }
                 }
-                else
-                {
-                    checkBox.Checked = @checked;
-                }
+            }
+            catch
+            {
             }
         }
 
